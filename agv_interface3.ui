@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1469</width>
+    <height>799</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kavurlar-Agv</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="kavurlar_logo.qrc">
+    <normaloff>:/icons/icons/kavurlar_logo.png</normaloff>:/icons/icons/kavurlar_logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0" colspan="3">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="startMappingButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>30</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Harita Başlat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="startRouteButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Rota Başlat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="startAutonomousButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Otonom Başlat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="stopMappingButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Harita Durdur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="stopRouteButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Rota Durdur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="StopAutonomoustButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Otonom Durdur</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="saveMappingButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Harita Kaydet</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="routeCoordinateButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Rota Koordinat</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="autonomousSettingsButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Otonom Ayarlar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="4" rowspan="7">
+     <widget class="QFrame" name="rvizFrame">
+      <property name="minimumSize">
+       <size>
+        <width>800</width>
+        <height>700</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="instantaneousVelocityLabel">
+      <property name="text">
+       <string>Anlık Hız:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="instantaneousVelocityX"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="instantaneousVelocityY"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="statusBatteryLabel">
+      <property name="text">
+       <string>Batarya Durumu:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="statusBattery"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="position">
+      <property name="text">
+       <string>Konum:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="positionX">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLineEdit" name="positionY">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLineEdit" name="positionZ"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="slopeLabel">
+      <property name="text">
+       <string>Eğim:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLineEdit" name="slopeX"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLineEdit" name="slopeY"/>
+    </item>
+    <item row="4" column="3">
+     <widget class="QLineEdit" name="slopeZ"/>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="linearVelocityUp">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Doğrusal Hız Artır</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="linearVelocityDown">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Doğrusal Hız Azalt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="AngularVelocityUp">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Açısal Hız Artır</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="angularVelocityDown">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+        </property>
+        <property name="text">
+         <string>Açısal Hız Azalt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="leftForwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SOL İLERİ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="forwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>İLERİ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="rightForwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SAĞ İLERİ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="leftButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SOL</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="StopButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>DUR</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="rightButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SAĞ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="leftBackwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SOL GERİ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="backwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>GERİ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="rightBackwardButton">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(114, 159, 207);</string>
+          </property>
+          <property name="text">
+           <string>SAĞ GERİ</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="0" colspan="2">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1469</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="kavurlar_logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
